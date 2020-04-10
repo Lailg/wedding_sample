@@ -39,9 +39,12 @@
 
 	// Scrollax
    $.Scrollax();
-
-
-
+   document.addEventListener('scroll', musicPlay);
+   document.addEventListener('click', musicPlay);
+   function musicPlay() {
+	   document.getElementById('player').play();
+	   document.removeEventListener('click', musicPlay);
+   }
    // Burger Menu
 	var burgerMenu = function() {
 
