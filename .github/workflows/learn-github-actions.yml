@@ -1,5 +1,14 @@
 name: learn-github-actions
 on: workflow_dispatch
+  inputs:
+      server_test_url:
+        description: 'Enter server test url'
+        required: true
+        type: string
+      user_phone_number:
+        description: 'Enter phone number of user for test'
+        required: true
+        type: string
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
